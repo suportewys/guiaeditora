@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar no-border>
+    <button ion-button menuToggle color="light">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{ 'CATEGORIES' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content style="background-color: white;" #container>
+
+  <empty-view *ngIf="isErrorViewVisible" icon="alert" [text]="'ERROR_CATEGORIES' | translate">
+  </empty-view>
+
+  <empty-view *ngIf="isEmptyViewVisible" icon="bookmark" [text]="'EMPTY_CATEGORIES' | translate">
+  </empty-view>
+
+  <ion-refresher (ionRefresh)="onReload($event)">
+    <ion-refresher-content pullingText="{{ 'PULL_TO_REFRESH' | translate }}" refreshingText="{{ 'REFRESHING' | translate }}">
+    </ion-refresher-content>
+  </ion-refresher>
+
+<!--   <ion-list *ngIf="isContentViewVisible">
+    <ion-item color="light" *ngFor="let category of categories" (click)="goToPlaces(category)">
+      <ion-avatar item-left>
+        <img src="assets/img/tag.png" offset="100" [lazyLoad]="category.imageThumb.url()" [scrollTarget]="container.getScrollElement()">
+      </ion-avatar>
+      <h2>{{ category.title }}</h2>
+    </ion-item>
+  </ion-list> -->
+
+  <ion-grid *ngIf="isContentViewVisible">
+    <ion-row text-center>
+      <ion-col col-4 *ngFor="let category of categories" (click)="goToPlaces(category)">
+        <ion-avatar item-left>
+          <img style="border-radius: 50%"src="assets/img/tag.png" offset="100" [lazyLoad]="category.imageThumb.url()" [scrollTarget]="container.getScrollElement()">
+        </ion-avatar>
+        <p>{{ category.title }}</p>
+
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

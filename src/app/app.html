@@ -1,0 +1,30 @@
+<ion-menu padding-top [content]="content" (ionOpen)="onMenuOpened()" (ionClose)="onMenuClosed()">
+  <ion-header>
+    <ion-toolbar>
+      <ion-item style="background-color: rgba(255, 255, 255, 0);" no-lines *ngIf="user">
+        <ion-avatar item-left>
+          <img [src]="user.get('photo') ? user.get('photo').url() : ''" src-fallback="assets/img/avatar.png">
+        </ion-avatar>
+        <span>{{ user.get('name') }}</span>
+      </ion-item>
+    </ion-toolbar>
+  </ion-header> 
+ 
+  <ion-content style="background: linear-gradient(rgb(223, 223, 223), rgb(209, 209, 209));">
+   <!--  <div padding text-center>
+      <img src="assets/img/image.png" width="70%">
+    </div> -->
+    <ion-list no-lines>
+      <button class="bold" style="background-color: rgba(255, 255, 255, 0); color: white;" menuClose text-uppercase no-lines ion-item
+        *ngFor="let p of pages" (click)="openPage(p)">
+        <ion-icon [name]="p.icon" item-left color="light"></ion-icon>
+        <p ion-text color="light">
+          {{ p.title }}
+        </p>
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content></ion-nav>

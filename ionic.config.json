@@ -1,0 +1,8 @@
+{
+  "name": "NearmeApp v3",
+  "app_id": "9d2de137",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

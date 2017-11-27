@@ -1,0 +1,111 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url('../assets/fonts/RobotoCondensed-Regular.ttf') format('truetype');
+}
+
+$SIDEMENU_TOP: #e75d00;
+$SIDEMENU_BOTTOM: #e75d00;
+$SIDEMENU_TRANSPARENCY: rgb(255, 255, 255);
+
+.toolbar-background-md {
+    background: -webkit-gradient(left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    background: -o-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    background: -moz-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    background: linear-gradient(to bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    background-repeat: repeat-x;
+    border: none;
+    color: white;
+}
+
+.toolbar-background-ios{
+    background: -webkit-gradient(left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    background: -o-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    background: -moz-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    background: linear-gradient(to bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    border: none;
+    background-repeat: repeat-x;
+    color: white;
+}
+
+
+.navbar-background-md {
+    background: -webkit-gradient(left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    background: -o-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    background: -moz-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    background: linear-gradient(to bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    border: none;
+    background-repeat: repeat-x;
+    color: white;
+}
+
+.navbar-background-ios{
+    background: -webkit-gradient(left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    background: -o-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    background: -moz-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    background: linear-gradient(to bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    border: none;
+    background-repeat: repeat-x;
+    color: white;
+}
+
+
+.menu-background-md {
+    background: -webkit-gradient(left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    background: -o-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    background: -moz-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    background: linear-gradient(to bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    background-repeat: repeat-x;
+    border: none;
+    color: white;
+}
+
+.menu-background-ios{
+    background: -webkit-gradient(left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    background: -o-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    background: -moz-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    background: linear-gradient(to bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    background-repeat: repeat-x;
+    border: none;
+    color: white;
+}
+
+ion-app {
+  font-family: 'Roboto Condensed', "Helvetica Neue", sans-serif !important;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.menu-toolbar {
+  padding: 0;
+}
+
+ion-list-header {
+  border-bottom-color: $text-color !important;
+}
+
+.scroll {
+  height: 100%;
+}
+
+ion-app._gmaps_cdv_ .nav-decor {
+  background-color: transparent !important;
+}
