@@ -20,8 +20,8 @@
   src: url('../assets/fonts/RobotoCondensed-Regular.ttf') format('truetype');
 }
 
-$SIDEMENU_TOP: #e75d00;
-$SIDEMENU_BOTTOM: #e75d00;
+$SIDEMENU_TOP: #FF7440;
+$SIDEMENU_BOTTOM: #FFB800;
 $SIDEMENU_TRANSPARENCY: rgb(255, 255, 255);
 
 .toolbar-background-md {
@@ -30,7 +30,6 @@ $SIDEMENU_TRANSPARENCY: rgb(255, 255, 255);
     background: -moz-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
     background: linear-gradient(to bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
     background-repeat: repeat-x;
-    border: none;
     color: white;
 }
 
@@ -39,7 +38,6 @@ $SIDEMENU_TRANSPARENCY: rgb(255, 255, 255);
     background: -o-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
     background: -moz-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
     background: linear-gradient(to bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
-    border: none;
     background-repeat: repeat-x;
     color: white;
 }
@@ -50,7 +48,6 @@ $SIDEMENU_TRANSPARENCY: rgb(255, 255, 255);
     background: -o-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
     background: -moz-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
     background: linear-gradient(to bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
-    border: none;
     background-repeat: repeat-x;
     color: white;
 }
@@ -60,7 +57,6 @@ $SIDEMENU_TRANSPARENCY: rgb(255, 255, 255);
     background: -o-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
     background: -moz-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
     background: linear-gradient(to bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
-    border: none;
     background-repeat: repeat-x;
     color: white;
 }
@@ -82,9 +78,15 @@ $SIDEMENU_TRANSPARENCY: rgb(255, 255, 255);
     background: -moz-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
     background: linear-gradient(to bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
     background-repeat: repeat-x;
-    border: none;
     color: white;
 }
+
+
+.masters{
+  
+      background-color: white;
+      padding: 0px;
+    }
 
 ion-app {
   font-family: 'Roboto Condensed', "Helvetica Neue", sans-serif !important;

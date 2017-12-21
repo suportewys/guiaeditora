@@ -11,6 +11,7 @@ import { User } from '../providers/user-service';
 import { LocalStorage } from '../providers/local-storage';
 import { Preference } from '../providers/preference';
 import { MapStyle } from '../providers/map-style';
+import { AdMobFree } from '@ionic-native/admob-free';
 
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -27,7 +28,6 @@ import { GoogleMaps } from '@ionic-native/google-maps';
 import { AppVersion } from '@ionic-native/app-version';
 import { HeaderColor } from '@ionic-native/header-color';
 import { GoogleAnalytics } from '@ionic-native/google-analytics';
-import { AdMobFree } from '@ionic-native/admob-free';
 import { BrowserTab } from '@ionic-native/browser-tab';
 
 import { IonicStorageModule } from '@ionic/storage';
@@ -84,8 +84,8 @@ export function HttpLoaderFactory(http: Http) {
     GoogleMaps,
     Camera,
     GoogleAnalytics,
-    AdMobFree,
     AppVersion,
+    AdMobFree,
     HeaderColor,
     BrowserTab,
     File,

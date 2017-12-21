@@ -59,11 +59,11 @@ export class MyApp {
       this.trans = values;
 
       this.pages = [
-        { title: values.CATEGORIES, icon: 'pricetag', component: 'CategoriesPage' },
-        { title: values.MAP, icon: 'map', component: 'MapPage' },
-        { title: values.ADD_PLACE, icon: 'create', component: 'AddPlacePage' },
-        { title: values.MY_FAVORITES, icon: 'heart', component: 'FavoritesPage' },
-        { title: values.SETTINGS, icon: 'settings', component: 'SettingsPage' },
+        { title: 'Principal', icon: 'ios-pricetag-outline', component: 'CategoriesPage' },
+        { title: values.MAP, icon: 'ios-map-outline', component: 'MapPage' },
+        { title: values.ADD_PLACE, icon: 'ios-create-outline', component: 'AddPlacePage' },
+        { title: values.MY_FAVORITES, icon: 'ios-heart-outline', component: 'FavoritesPage' },
+        { title: values.SETTINGS, icon: 'ios-settings-outline', component: 'SettingsPage' },
       ];
 
       if (User.getCurrentUser()) {
@@ -140,10 +140,6 @@ export class MyApp {
         this.googleAnalytics.trackEvent('', 'App opened');
         this.googleAnalytics.debugMode();
         this.googleAnalytics.enableUncaughtExceptionReporting(true);
-      }
-
-      if (AppConfig.HEADER_COLOR && this.platform.is('android')) {
-        this.headerColor.tint(AppConfig.HEADER_COLOR);
       }
 
       this.statusBar.styleDefault();

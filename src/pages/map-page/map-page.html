@@ -5,14 +5,15 @@
     </button>
     <ion-title>{{ "MAP" | translate }}</ion-title>
   </ion-navbar>
-  <ion-toolbar >
-    <ion-searchbar color="dark" debounce="2000"
-      placeholder="{{ 'ENTER_ADDRESS' | translate }}"
-      (ionInput)="onSearchAddress($event)"></ion-searchbar>
-  </ion-toolbar>
+  
 </ion-header>
 
-<ion-content>
+<ion-content class="masters">
+    <ion-toolbar >
+        <ion-searchbar color="dark" debounce="2000"
+          placeholder="{{ 'ENTER_ADDRESS' | translate }}"
+          (ionInput)="onSearchAddress($event)"></ion-searchbar>
+      </ion-toolbar>
   <div id="map" class="map" #map showWhen="android,ios"></div>
   <empty-view [text]="'ERROR_CORDOVA_MAPS' | translate" icon="map" showWhen="core">
   </empty-view>

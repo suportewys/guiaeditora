@@ -4,25 +4,25 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding text-center>
+<ion-content style="background-color: #f4f4f4;" padding text-center>
   
-  <img margin class="logo" src="assets/img/icon.png" width="120">
+  <img margin class="logo" src="assets/img/achei-logo.png" width="120">
 
   <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
 
  
-    <ion-item>
-      <ion-label stacked color="primary">{{ "EMAIL" | translate }}</ion-label>
+    <ion-item color="light">
+      <ion-label stacked color="text">{{ "EMAIL" | translate }}</ion-label>
       <ion-input type="email" formControlName="email"></ion-input>
     </ion-item>
 
-    <ion-item>
-      <ion-label stacked color="primary">{{ "PASSWORD" | translate }}</ion-label>
+    <ion-item color="light">
+      <ion-label stacked color="text">{{ "PASSWORD" | translate }}</ion-label>
       <ion-input type="password" formControlName="password"></ion-input>
     </ion-item>
 
     <div padding>
-      <button type="submit" color="primary" ion-button block
+      <button type="submit" color="text" ion-button block
         [disabled]="!form.valid">
         {{ "LOGIN" | translate }}
       </button>

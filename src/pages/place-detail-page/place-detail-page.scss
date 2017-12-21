@@ -1,10 +1,14 @@
 page-place-detail-page {
+
+
   ion-slides {
-    height: auto;
+    height: 38%;
+    margin-top: 0px;
   }
 
   .card-secondary {
     background: color($colors, dark, base);
+    padding-left: 0px;
   }
 
   ion-card {

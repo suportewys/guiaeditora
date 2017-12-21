@@ -1,5 +1,17 @@
-<ion-header>
-  <ion-navbar no-border>
+<style>
+
+.col {
+    padding: 0;
+    padding-bottom: 2px;
+    width: 100%;
+  }
+
+
+</style>
+
+
+<ion-header no-border>
+  <ion-navbar>
     <button ion-button menuToggle color="light">
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -7,7 +19,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content style="background-color: white;" #container>
+<ion-content class=" masters" #container>
 
   <empty-view *ngIf="isErrorViewVisible" icon="alert" [text]="'ERROR_CATEGORIES' | translate">
   </empty-view>
@@ -15,12 +27,12 @@
   <empty-view *ngIf="isEmptyViewVisible" icon="bookmark" [text]="'EMPTY_CATEGORIES' | translate">
   </empty-view>
 
-  <ion-refresher (ionRefresh)="onReload($event)">
+  <ion-refresher no-border (ionRefresh)="onReload($event)">
     <ion-refresher-content pullingText="{{ 'PULL_TO_REFRESH' | translate }}" refreshingText="{{ 'REFRESHING' | translate }}">
     </ion-refresher-content>
   </ion-refresher>
 
-<!--   <ion-list *ngIf="isContentViewVisible">
+  <!--   <ion-list *ngIf="isContentViewVisible">
     <ion-item color="light" *ngFor="let category of categories" (click)="goToPlaces(category)">
       <ion-avatar item-left>
         <img src="assets/img/tag.png" offset="100" [lazyLoad]="category.imageThumb.url()" [scrollTarget]="container.getScrollElement()">
@@ -29,17 +41,26 @@
     </ion-item>
   </ion-list> -->
 
-  <ion-grid *ngIf="isContentViewVisible">
-    <ion-row text-center>
-      <ion-col col-4 *ngFor="let category of categories" (click)="goToPlaces(category)">
-        <ion-avatar item-left>
-          <img style="border-radius: 50%"src="assets/img/tag.png" offset="100" [lazyLoad]="category.imageThumb.url()" [scrollTarget]="container.getScrollElement()">
-        </ion-avatar>
-        <p>{{ category.title }}</p>
+  
 
-      </ion-col>
-    </ion-row>
+  <div class="card-background-page" *ngFor="let category of categories" (click)="goToPlaces(category)">
+<div class="wrapper">
+    <div class="cols">
+              <div class="col" >
+                  <div class="container">
+                      <div class="front" [style.backgroundImage]="'url(' + category.imageThumb.url() + ')'">
+                          <div class="inner">
+                              <h1>{{ category.title }}</h1>
+                <!-- <span>Lorem ipsum</span> -->
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+   </div>
 
-  </ion-grid>
+
+  </div>
+
 
 </ion-content>

@@ -6,23 +6,34 @@ page-walkthrough-page {
     .swiper-wrapper {
 
       .slide-1 {
-        background-color: color($colors, dark, base);
+       background-image: url('../assets/img/1.jpg'); 
+       background-repeat:no-repeat;
+       background-position: center center;
       }
 
       .slide-2 {
-        background-color: color($colors, primary, base);
+        background-image: url('../assets/img/2.jpg'); 
+        background-repeat:no-repeat;
+        background-position: center center;
       }
 
       .slide-3 {
-        background-color: color($colors, light, base);
+        background-image: url('../assets/img/3.jpg'); 
+        background-repeat:no-repeat;
+        background-position: center center;
       }
 
       .slide-4 {
-        background-color: color($colors, dark, base);
+        background-image: url('../assets/img/4.jpg'); 
+        background-repeat:no-repeat;
+        background-position: center center;
       }
 
       .slide-5 {
-        background-color: color($colors, primary, base);
+        //background-color: color($colors, text, base);
+        background-image: url('../assets/img/1.jpg'); 
+        background-repeat:no-repeat;
+        background-position: center center;
       }
 
       ion-slide {

@@ -1,13 +1,13 @@
-<ion-header>
-  <ion-navbar>
+<ion-header >
+  <ion-navbar no-border>
     <ion-title>{{ place.title }}</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content style="background-color: white;"  #container>
+<ion-content class="masters"  #container>
 
   <ion-slides pager>
-    <ion-slide *ngFor="let image of images">
+    <ion-slide   *ngFor="let image of images">
       <img src="assets/img/avatar.png" offset="100"
         [lazyLoad]="image.url()"
         [scrollTarget]="container.getScrollElement()" />
@@ -41,7 +41,7 @@
           <button ion-button icon-left small round block
             color="primary" (click)="onShare()">
             <ion-icon name="share"></ion-icon>
-            {{ "SHARE" | translate }}
+         
           </button>
         </ion-col>
       </ion-row>
@@ -65,7 +65,7 @@
     </ion-item>
 
     <ion-item color="light">
-      <span class="bold" item-left ion-text color="primary" *ngIf="location">
+      <span class="bold" item-left ion-text color="text" *ngIf="location">
         <small>({{ place.distance(location, unit) }})</small>
       </span>
       <button ion-button item-right color="light" (click)="goToMap()">

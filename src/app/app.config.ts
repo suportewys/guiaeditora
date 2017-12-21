@@ -2,7 +2,7 @@ export class AppConfig {
 
   /* Parse Server URL */
    public static get SERVER_URL(): string {
-     return 'http://nearme.quanlabs.com/parse/';
+     return 'https://guiaeditora.herokuapp.com/parse';
    }
 
    /* Parse App ID  */
@@ -27,7 +27,7 @@ export class AppConfig {
 
    /* Unit: km or mi  */
    public static get DEFAULT_UNIT(): string {
-     return 'mi';
+     return 'km';
    }
 
    /* Map style: satellite or roadmap */
@@ -36,6 +36,6 @@ export class AppConfig {
    }
 
    public static get DEFAULT_LANG(): string {
-     return 'en';
+     return 'pt';
    }
 }
